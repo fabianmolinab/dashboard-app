@@ -1,18 +1,18 @@
 
 /**
  * Este componente es un boton de tipo gradiente
- * @param {string} nombre Nombre del boton
+ * @param {string} name Nombre del boton
  * @param {string} type Tipo de boton
  **/
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../const/colors'
 
-export const ButtonGradient = ({ nombre, type }) => {
+export const ButtonGradient = ({ name, type }) => {
   return (
     <>
       <ContenedorBoton>
-        <Button type={type}>{nombre}</Button>
+        <Button type={type}>{name}</Button>
         <Bg />
         <BgGradient />
       </ContenedorBoton>

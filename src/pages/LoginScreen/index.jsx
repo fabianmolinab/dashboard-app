@@ -50,7 +50,7 @@ export const LoginScreen = () => {
             name="Correo Electronico"
             type="text"
             error="Tienes un error en el correo"
-            expresionRegular={expresiones.correo}
+            expresionRegular={expresiones.mail}
           />
 
           <InputForm
@@ -62,9 +62,9 @@ export const LoginScreen = () => {
             expresionRegular={expresiones.password}
           />
           <ContenedorFlex>
-            <ButtonGradient type="submit" nombre="Iniciar Sección" />
+            <ButtonGradient type="submit" name="Iniciar Sección" />
 
-            <Button onClick={handleSignUp} nombre="Registrate" />
+            <Button onClick={handleSignUp} name="Registrate" />
           </ContenedorFlex>
         </FormContainer>
       </GlobalContainer>

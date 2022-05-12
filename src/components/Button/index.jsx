@@ -25,14 +25,14 @@ export const BottonStyles = styled.button`
   background: ${colors.green};
   border: 1.5px solid ${colors.green};
   cursor: pointer;
-  color: ${colors.white};
+  color: ${colors.Black};
   transition: all 0.4s;
   border-radius: 8px;
 
   &:hover {
     font-weight: 700;
-    border-width: medium;
-    transform: scale(1, 1.1);
+    //border-width: medium;
+    transform: scale(1.1, 1.1);
   }
 
   ${(props) =>
