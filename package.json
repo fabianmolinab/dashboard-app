@@ -26,9 +26,9 @@
     "eslint-plugin-react": "7.29.4",
     "husky": "8.0.1",
     "jsdoc": "3.6.10",
-    "react-router-dom": "6.3.0",
     "lint-staged": ">=10",
-    "style-components": "^0.1.0",
+    "react-router-dom": "6.3.0",
+    "styled-components": "5.3.5",
     "vite": "2.9.7"
   },
   "lint-staged": {
