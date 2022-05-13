@@ -7,10 +7,10 @@ import styled, { css } from 'styled-components'
 import { device } from '../../const/device.js'
 import { ButtonGradient } from '../../components/ButtonGradient'
 import { expresiones } from '../../const/expresionesRegulares'
-import { InputForm } from '../../components/InputForm/index.jsx'
-import { Button } from '../../components/Button/index.jsx'
+import { InputForm } from '../../components/InputForm/index'
+import { Button } from '../../components/Button/index'
 
-export const LoginScreen = () => {
+export const LoginScreen = (props: {}) => {
   // Hook para manejar el formulario del correo
   const [correo, cambiarCorreo] = useState({
     campo: '',
@@ -27,12 +27,12 @@ export const LoginScreen = () => {
 
     // Acá se realiza la validación de ambos formularios y redirija a '/'
     if (correo.valido === 'true' && password.valido === 'true') {
-      history.push('/')
+      console.log('Listo')
     }
   }
 
   const handleSignUp = () => {
-    history.push('/signup')
+    console.log('SignUp')
   }
 
   return (
