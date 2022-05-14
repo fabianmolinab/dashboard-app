@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components'
 import { colors } from '../../const/colors'
 
-const ContenedorInput = styled.div`
+interface Props {
+  readonly signup?: boolean
+  readonly valido?: string
+}
+
+const ContenedorInput = styled.div<Props>`
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -30,12 +35,12 @@ const LabelInput = styled.label`
   cursor: pointer;
 
   ${(props) => props.color === 'true' &&
-      css`
+    css`
       color: ${colors.darkGreen} !important
   `}
 `
 
-const TituloError = styled.p`
+const TituloError = styled.p<Props>`
   display: none;
   width: 90%;
   color: ${colors.red};

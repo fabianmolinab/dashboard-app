@@ -8,7 +8,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../const/colors'
 
-export const ButtonGradient = ({ name, type }) => {
+interface Props {
+  name: string
+  type: 'submit' | 'reset' | 'button'
+}
+
+export const ButtonGradient: React.FC<Props> = ({ name, type }) => {
   return (
     <>
       <ContenedorBoton>
@@ -26,15 +31,15 @@ const Button = styled.button`
   height: 100%;
   font-weight: 600;
   background: ${colors.white};
-  border: 1.5px solid ${colors.blackText};
-  color: ${colors.blackText};
+  border: 1.5px solid ${colors.black};
+  color: ${colors.black};
   cursor: pointer;
   transition: all 0.3s;
   z-index: 3;
   border-radius: 10px;
 
   &:hover {
-    color: ${colors.blackText};
+    color: ${colors.black};
     font-weight: 700;
     border: none;
     background: linear-gradient(
@@ -75,7 +80,7 @@ const ContenedorBoton = styled.div`
       to right,
       ${colors.blue},
       ${colors.green},
-      ${colors.greenDark}
+      ${colors.darkGreen}
     );
   }
 `

@@ -3,13 +3,20 @@
  * Componente boton estandar
  * @param {function} onClick Accion despues del click
  * @param {string} name Contenido del boton
- * @param {object} largeV Propiedad para hacer el botton mas ancho y verde
+ * @param {boolean} largeV Propiedad para hacer el botton mas ancho y verde
  * */
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { colors } from '../../const/colors'
 
-export const Button = ({ onClick, name, type, largeV }) => {
+interface Props {
+  onClick: () => void
+  name: string
+  type: 'submit' | 'reset' | 'button'
+  largeV?: boolean
+}
+
+export const Button: React.FC<Props> = ({ onClick, name, type, largeV }) => {
   return (
     <BottonStyles onClick={onClick} type={type} largeV={largeV}>
       {name}
@@ -17,7 +24,11 @@ export const Button = ({ onClick, name, type, largeV }) => {
   )
 }
 
-export const BottonStyles = styled.button`
+interface BottonStylesProps {
+  largeV?: boolean
+}
+
+export const BottonStyles = styled.button<BottonStylesProps>`
   width: 150px;
   height: 40px;
   margin-left: 20px;
@@ -25,7 +36,7 @@ export const BottonStyles = styled.button`
   background: ${colors.green};
   border: 1.5px solid ${colors.green};
   cursor: pointer;
-  color: ${colors.Black};
+  color: ${colors.black};
   transition: all 0.4s;
   border-radius: 8px;
 
