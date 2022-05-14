@@ -1,19 +1,20 @@
-/**
- * Este componente es el input de algun formulario
- * @param {object} estado
- * @param {function} cambiarEstado Cambia el estado del input
- * @param {string} name Titulo del formulario
- * @param {string} type Tipo de Input
- * @param {string} error Mensaje de error
- * @param {object} expresionRegular Tipo de expresion regular
- * @param {props} signup Es una propiedad de estilos propios en la pagina signup
- */
 
-import React from 'react'
-import { Input } from '../Input'
+import React, { Dispatch, SetStateAction } from 'react'
+import { FormType } from '../../pages/LoginScreen/LoginScreen.interface'
+import { Input } from '../Input/Input'
 import { ContenedorInput, LabelInput, TituloError } from './InputForm.styles'
 
-export const InputForm = ({
+interface Props {
+  estado: FormType
+  cambiarEstado: Dispatch<SetStateAction<FormType>>
+  name: string
+  type: string
+  error: string
+  expresionRegular: RegExp
+  signup?: boolean | undefined
+}
+
+export const InputForm: React.FC<Props> = ({
   estado,
   cambiarEstado,
   name,
