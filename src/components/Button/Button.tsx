@@ -1,16 +1,9 @@
-
-/**
- * Componente boton estandar
- * @param {function} onClick Accion despues del click
- * @param {string} name Contenido del boton
- * @param {boolean} largeV Propiedad para hacer el botton mas ancho y verde
- * */
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { colors } from '../../const/colors'
 
 interface Props {
-  onClick: () => void
+  onClick?: () => void
   name: string
   type: 'submit' | 'reset' | 'button'
   largeV?: boolean
