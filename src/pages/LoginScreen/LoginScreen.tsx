@@ -10,6 +10,7 @@ import { InputForm } from '../../components/InputForm/InputForm'
 import { Button } from '../../components/Button/Button'
 import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './LoginScreen.styles.js'
 import { FormType } from './LoginScreen.interface'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginScreen: React.FC = () => {
   const [correo, cambiarCorreo] = useState<FormType>({
@@ -24,6 +25,8 @@ export const LoginScreen: React.FC = () => {
 
   type HandleInputLogin = FormEvent<HTMLFormElement>
 
+  const navigate = useNavigate()
+
   const handleLogin = (e: HandleInputLogin) => {
     e.preventDefault()
 
@@ -34,7 +37,7 @@ export const LoginScreen: React.FC = () => {
   }
 
   const handleSignUp = () => {
-    console.log('SignUp')
+    navigate('/signup')
   }
 
   return (

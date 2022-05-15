@@ -44,7 +44,7 @@ export const BottonStyles = styled.button<BottonStylesProps>`
     css`
       width: 200px;
       margin: 10px auto;
-      background: ${colors.white};
-      color: ${colors.white};
+      background: ${colors.green};
+      color: ${colors.black};
     `}
 `
