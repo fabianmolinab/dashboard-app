@@ -49,6 +49,7 @@ const FormContainer = styled.form`
     width: 80%;
   } ;
 `
+
 const HeaderForm = styled.header<MarginProps>`
   text-align: center;
   box-sizing: border-box;
