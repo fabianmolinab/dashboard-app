@@ -1,6 +1,6 @@
 
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { FormType } from '../../pages/LoginScreen/LoginScreen.interface'
+import { FormType } from '../../../pages/LoginScreen/LoginScreen.interface'
 import { InputStyles } from './Input.styles'
 
 interface Props {

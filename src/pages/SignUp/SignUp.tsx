@@ -4,13 +4,13 @@ import { FormType } from '../LoginScreen/LoginScreen.interface'
 import { GlobalStyle } from '../../styles/GlobalStyles'
 import { ContenedorGridC2, FormGrid } from './SignUp.styles'
 import { GlobalContainer } from '../LoginScreen/LoginScreen.styles'
-import { HeaderFormSignUp } from '../../components/HeaderForm/HeaderFormSignUp'
+import { HeaderFormSignUp } from '../../components/atoms/HeaderForm/HeaderFormSignUp'
 import { expresiones } from '../../const/expresionesRegulares'
-import { InputForm } from '../../components/InputForm/InputForm'
+import { InputForm } from '../../components/molecules/InputForm/InputForm'
 import { ConfirmMessage, TerminosType } from './SignUp.interface'
-import { InputCheckbox } from '../../components/InputCheckbox/InputCheckbox'
-import { Button } from '../../components/Button/Button'
-import { ErrorMenssage } from '../../components/ErrorMenssage/ErrorMenssage'
+import { InputCheckbox } from '../../components/molecules/InputCheckbox/InputCheckbox'
+import { Button } from '../../components/atoms/Button/Button'
+import { ErrorMenssage } from '../../components/atoms/ErrorMenssage/ErrorMenssage'
 
 export const SignUp: React.FC = () => {
   const [nombre, cambiarNombre] = useState<FormType>({

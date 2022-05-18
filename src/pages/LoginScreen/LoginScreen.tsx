@@ -4,10 +4,10 @@
 
 import React, { FormEvent, useState } from 'react'
 
-import { ButtonGradient } from '../../components/ButtonGradient/ButtonGradient'
+import { ButtonGradient } from '../../components/atoms/ButtonGradient/ButtonGradient'
 import { expresiones } from '../../const/expresionesRegulares'
-import { InputForm } from '../../components/InputForm/InputForm'
-import { Button } from '../../components/Button/Button'
+import { InputForm } from '../../components/molecules/InputForm/InputForm'
+import { Button } from '../../components/atoms/Button/Button'
 import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './LoginScreen.styles.js'
 import { FormType } from './LoginScreen.interface'
 

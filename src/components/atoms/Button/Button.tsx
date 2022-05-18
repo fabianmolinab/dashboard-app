@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { colors } from '../../const/colors'
+import { colors } from '../../../const/colors'
 
 interface Props {
   onClick?: () => void

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { colors } from '../../const/colors'
+import { colors } from '../../../const/colors'
 
 interface InputStylesProps {
   readonly valido?: string
