@@ -1,50 +1,36 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { colors } from '../../../const/colors'
+import { fontSize, fontWeigh } from '../../../const/fonts'
 
 interface Props {
   onClick?: () => void
   name: string
   type: 'submit' | 'reset' | 'button'
-  largeV?: boolean
 }
 
-export const Button: React.FC<Props> = ({ onClick, name, type, largeV }) => {
+export const Button: React.FC<Props> = ({ onClick, name, type }) => {
   return (
-    <BottonStyles onClick={onClick} type={type} largeV={largeV}>
+    <ButtonStyles onClick={onClick} type={type} >
       {name}
-    </BottonStyles>
+    </ButtonStyles>
   )
 }
 
-interface BottonStylesProps {
-  largeV?: boolean
-}
-
-export const BottonStyles = styled.button<BottonStylesProps>`
-  width: 150px;
-  height: 40px;
-  margin-left: 20px;
-  font-weight: 700;
-  background: ${colors.green};
-  border: 1.5px solid ${colors.green};
+export const ButtonStyles = styled.button`
+  display: inline-block;
+  height: 48px;
+  font-weight: ${fontWeigh.medium};
+  font-size: ${fontSize.regular};
+  background-color: ${colors.primaryColors.pBase};
+  border-radius: 4px;
+  border: none;
+  color: ${colors.background.primary};
   cursor: pointer;
-  color: ${colors.black};
-  transition: all 0.4s;
-  border-radius: 8px;
+  padding: 0 24px; 
 
   &:hover {
-    font-weight: 700;
-    //border-width: medium;
-    transform: scale(1.1, 1.1);
+    background-color: ${colors.primaryColors.p600};
+    transition: all 0.2s ;
   }
-
-  ${(props) =>
-    props.largeV &&
-    css`
-      width: 200px;
-      margin: 10px auto;
-      background: ${colors.white};
-      color: ${colors.white};
-    `}
 `

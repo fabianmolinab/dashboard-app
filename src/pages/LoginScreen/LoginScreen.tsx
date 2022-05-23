@@ -10,6 +10,7 @@ import { InputForm } from '../../components/molecules/InputForm/InputForm'
 import { Button } from '../../components/atoms/Button/Button'
 import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './LoginScreen.styles.js'
 import { FormType } from './LoginScreen.interface'
+import { ButtonIcon } from '../../components/atoms/ButtonIcon/ButtonIcon'
 
 export const LoginScreen: React.FC = () => {
   const [correo, cambiarCorreo] = useState<FormType>({
@@ -66,7 +67,7 @@ export const LoginScreen: React.FC = () => {
           <ContenedorFlex>
             <ButtonGradient type="submit" name="Iniciar Sección" />
 
-            <Button type="button" onClick={handleSignUp} name="Registrate" />
+            <ButtonIcon type="button" onClick={handleSignUp} name="Registrate" nameIcon='arrow-forward-circle-outline' />
           </ContenedorFlex>
         </FormContainer>
       </GlobalContainer>

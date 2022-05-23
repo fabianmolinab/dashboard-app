@@ -1,4 +1,3 @@
-
 /**
  * Este componente es un boton de tipo gradiente
  * @param {string} name Nombre del boton
@@ -16,11 +15,11 @@ interface Props {
 export const ButtonGradient: React.FC<Props> = ({ name, type }) => {
   return (
     <>
-      <ContenedorBoton>
+      <ContenedorButton>
         <Button type={type}>{name}</Button>
         <Bg />
         <BgGradient />
-      </ContenedorBoton>
+      </ContenedorButton>
     </>
   )
 }
@@ -67,7 +66,7 @@ const BgGradient = styled(Bg)`
   transition: all 0.4s;
 `
 
-const ContenedorBoton = styled.div`
+const ContenedorButton = styled.div`
   width: 150px;
   height: 40px;
   background: ${colors.white};
