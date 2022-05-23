@@ -162,7 +162,7 @@ export const SignUp: React.FC = () => {
             </label>
           </ContenedorGridC2>
 
-          <Button type="submit" name="Crear Cuenta" largeV />
+          <Button type="submit" name="Crear Cuenta" />
 
           <ContenedorGridC2>
             <ErrorMenssage mensajeConfirmacion={mensajeConfirmacion} />

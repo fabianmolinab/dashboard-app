@@ -4,7 +4,6 @@
 
 import React, { FormEvent, useState } from 'react'
 
-import { ButtonGradient } from '../../components/atoms/ButtonGradient/ButtonGradient'
 import { expresiones } from '../../const/expresionesRegulares'
 import { InputForm } from '../../components/molecules/InputForm/InputForm'
 import { Button } from '../../components/atoms/Button/Button'
@@ -65,7 +64,7 @@ export const LoginScreen: React.FC = () => {
             expresionRegular={expresiones.password}
           />
           <ContenedorFlex>
-            <ButtonGradient type="submit" name="Iniciar Sección" />
+            <Button type="submit" name="Iniciar Sección" />
 
             <ButtonIcon type="button" onClick={handleSignUp} name="Registrate" nameIcon='arrow-forward-circle-outline' />
           </ContenedorFlex>

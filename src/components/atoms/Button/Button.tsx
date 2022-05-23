@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { colors } from '../../../const/colors'
 import { fontSize, fontWeigh } from '../../../const/fonts'
 
@@ -7,17 +7,24 @@ interface Props {
   onClick?: () => void
   name: string
   type: 'submit' | 'reset' | 'button'
+  small?: boolean
+  large?: boolean
 }
 
-export const Button: React.FC<Props> = ({ onClick, name, type }) => {
+export const Button: React.FC<Props> = ({ onClick, name, type, small, large }) => {
   return (
-    <ButtonStyles onClick={onClick} type={type} >
+    <ButtonStyles onClick={onClick} type={type} small={small} large={large}>
       {name}
     </ButtonStyles>
   )
 }
 
-export const ButtonStyles = styled.button`
+interface ButtonStylesType {
+  readonly small?: boolean
+  readonly large?: boolean
+}
+
+export const ButtonStyles = styled.button<ButtonStylesType>`
   display: inline-block;
   height: 48px;
   font-weight: ${fontWeigh.medium};
@@ -33,4 +40,14 @@ export const ButtonStyles = styled.button`
     background-color: ${colors.primaryColors.p600};
     transition: all 0.2s ;
   }
+
+  ${props => props.small && css`
+    font-size: 0.875rem;
+    height: 32px;
+  `}
+
+  ${props => props.large && css`
+    height: 56px; 
+  `}
+
 `
