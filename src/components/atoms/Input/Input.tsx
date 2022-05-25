@@ -1,4 +1,3 @@
-
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { FormType } from '../../../pages/LoginScreen/LoginScreen.interface'
 import { InputStyles } from './Input.styles'
@@ -20,32 +19,32 @@ export const Input: React.FC<Props> = ({
   valido,
   expresionRegular
 }) => {
- type HandleInputChange = ChangeEvent<HTMLInputElement>
+  type HandleInputChange = ChangeEvent<HTMLInputElement>
 
- const onChange = ({ target }: HandleInputChange) => {
-   cambiarEstado({
-     ...estado,
-     campo: target.value
-   })
- }
+  const onChange = ({ target }: HandleInputChange) => {
+    cambiarEstado({
+      ...estado,
+      campo: target.value
+    })
+  }
 
- const validacion = () => {
-   if (expresionRegular) {
-     if (expresionRegular.test(estado.campo)) {
-       cambiarEstado({
-         ...estado,
-         valido: 'true'
-       })
-     } else {
-       cambiarEstado({
-         ...estado,
-         valido: 'false'
-       })
-     }
-   }
- }
+  const validacion = () => {
+    if (expresionRegular) {
+      if (expresionRegular.test(estado.campo)) {
+        cambiarEstado({
+          ...estado,
+          valido: 'true'
+        })
+      } else {
+        cambiarEstado({
+          ...estado,
+          valido: 'false'
+        })
+      }
+    }
+  }
 
- return (
+  return (
     <InputStyles
       type={type}
       autoComplete="off"
@@ -55,5 +54,5 @@ export const Input: React.FC<Props> = ({
       valido={valido}
       name={name}
     />
- )
+  )
 }

@@ -6,10 +6,10 @@ import React, { FormEvent, useState } from 'react'
 
 import { expresiones } from '../../const/expresionesRegulares'
 import { InputForm } from '../../components/molecules/InputForm/InputForm'
-import { Button } from '../../components/atoms/Button/Button'
 import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './LoginScreen.styles.js'
 import { FormType } from './LoginScreen.interface'
 import { ButtonIcon } from '../../components/atoms/ButtonIcon/ButtonIcon'
+import { ButtonSecondary } from '../../components/atoms/ButtonSecondary/ButtonSecondary'
 
 export const LoginScreen: React.FC = () => {
   const [correo, cambiarCorreo] = useState<FormType>({
@@ -64,7 +64,7 @@ export const LoginScreen: React.FC = () => {
             expresionRegular={expresiones.password}
           />
           <ContenedorFlex>
-            <Button type="submit" name="Iniciar Sección" />
+            <ButtonSecondary type="submit" name="Iniciar Sección" />
 
             <ButtonIcon type="button" onClick={handleSignUp} name="Registrate" nameIcon='arrow-forward-circle-outline' />
           </ContenedorFlex>
