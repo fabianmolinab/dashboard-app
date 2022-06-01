@@ -6,7 +6,7 @@
  * */
 import React, { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
-import { TerminosType } from '../../pages/SignUp/SignUp.interface'
+import { TerminosType } from '../../../pages/SignUp/SignUp.interface'
 
 interface Props {
   estado: TerminosType
