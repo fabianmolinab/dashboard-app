@@ -43,7 +43,7 @@ export const LoginScreen: React.FC = () => {
 
         <FormContainer onSubmit={handleLogin}>
           <HeaderForm margin>
-            <h2> Inicia Sección</h2>
+            <h3> Inicio Sección</h3>
           </HeaderForm>
 
           <InputForm

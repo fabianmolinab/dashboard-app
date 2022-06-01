@@ -4,7 +4,7 @@ import { colors } from '../../../const/colors'
 interface Props {
   readonly signup?: boolean
   readonly valido?: string
-  readonly color: string
+  readonly color?: string
 }
 
 const ContenedorInput = styled.div<Props>`
@@ -34,6 +34,7 @@ const LabelInput = styled.label<Props>`
   font-weight: 500;
   margin: 3px;
   min-height: 20px;
+  color: ${colors.primaryColors.pBase};
 
   ${(props) => props.color === 'true' &&
     css`

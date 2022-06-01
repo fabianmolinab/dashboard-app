@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { colors } from '../../const/colors'
 import { device } from '../../const/device'
 
 interface SignupProps {
@@ -38,6 +39,7 @@ const GlobalContainer = styled.div<SignupProps>`
 `
 
 const FormContainer = styled.form`
+  color: ${colors.primaryColors.pBase};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +53,9 @@ const FormContainer = styled.form`
 `
 
 const HeaderForm = styled.header<MarginProps>`
-  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  
   ${(props) =>
     props.margin &&
     css`
