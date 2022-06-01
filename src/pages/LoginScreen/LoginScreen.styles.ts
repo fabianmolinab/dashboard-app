@@ -51,8 +51,7 @@ const FormContainer = styled.form`
 `
 
 const HeaderForm = styled.header<MarginProps>`
-  text-align: center;
-  box-sizing: border-box;
+  font-weight: 600;
   ${(props) =>
     props.margin &&
     css`

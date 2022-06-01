@@ -6,12 +6,10 @@ interface InputStylesProps {
 }
 
 export const InputStyles = styled.input<InputStylesProps>`
-  display: block;
-  width: 85%;
+  width: 60%;
   padding: 6px;
-  border: 1.5px solid #000;
-  border-radius: 8px;
-  background-color: ${colors.white};
+  border: 1px solid ${colors.greysColors.grey500};
+  border-radius: 4px;
 
   /*La propiedad valido cambiar el color del borde del input*/
   ${(props) =>
