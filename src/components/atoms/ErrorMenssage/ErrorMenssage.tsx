@@ -5,8 +5,8 @@
  */
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { colors } from '../../const/colors'
-import { ConfirmMessage } from '../../pages/SignUp/SignUp.interface'
+import { colors } from '../../../const/colors'
+import { ConfirmMessage } from '../../../pages/SignUp/SignUp.interface'
 
 interface Props {
   mensajeConfirmacion: ConfirmMessage;

@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${colors.white};
-    color: ${colors.black};
+
+    color: ${colors.greysColors.grey800};
   }
 `

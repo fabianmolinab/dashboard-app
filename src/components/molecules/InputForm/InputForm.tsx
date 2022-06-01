@@ -1,7 +1,7 @@
 
 import React, { Dispatch, SetStateAction } from 'react'
-import { FormType } from '../../pages/LoginScreen/LoginScreen.interface'
-import { Input } from '../Input/Input'
+import { FormType } from '../../../pages/LoginScreen/LoginScreen.interface'
+import { Input } from '../../atoms/Input/Input'
 import { ContenedorInput, LabelInput, TituloError } from './InputForm.styles'
 
 interface Props {

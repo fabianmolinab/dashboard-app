@@ -1,9 +1,9 @@
-import { FC } from 'react'
+import React from 'react'
 
-export const DashboardRoutes: FC = () => {
+export const DashboardRoutes: React.FC = () => {
   return (
     <div>
-      <h1>DashboardRoutes pages</h1>
+      <h1>Dashboard Routes pages</h1>
     </div>
   )
 }

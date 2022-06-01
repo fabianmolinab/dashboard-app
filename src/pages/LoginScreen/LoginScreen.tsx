@@ -4,12 +4,12 @@
 
 import React, { FormEvent, useState } from 'react'
 
-import { ButtonGradient } from '../../components/ButtonGradient/ButtonGradient'
 import { expresiones } from '../../const/expresionesRegulares'
-import { InputForm } from '../../components/InputForm/InputForm'
-import { Button } from '../../components/Button/Button'
+import { InputForm } from '../../components/molecules/InputForm/InputForm'
 import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './LoginScreen.styles.js'
 import { FormType } from './LoginScreen.interface'
+import { ButtonIcon } from '../../components/atoms/ButtonIcon/ButtonIcon'
+import { ButtonSecondary } from '../../components/atoms/ButtonSecondary/ButtonSecondary'
 
 export const LoginScreen: React.FC = () => {
   const [correo, cambiarCorreo] = useState<FormType>({
@@ -24,6 +24,8 @@ export const LoginScreen: React.FC = () => {
 
   type HandleInputLogin = FormEvent<HTMLFormElement>
 
+  const navigate = useNavigate()
+
   const handleLogin = (e: HandleInputLogin) => {
     e.preventDefault()
 
@@ -34,7 +36,7 @@ export const LoginScreen: React.FC = () => {
   }
 
   const handleSignUp = () => {
-    console.log('SignUp')
+    navigate('/signup')
   }
 
   return (
@@ -43,7 +45,7 @@ export const LoginScreen: React.FC = () => {
 
         <FormContainer onSubmit={handleLogin}>
           <HeaderForm margin>
-            <h2> Inicia Sección</h2>
+            <h3> Inicio Sección</h3>
           </HeaderForm>
 
           <InputForm
@@ -64,9 +66,9 @@ export const LoginScreen: React.FC = () => {
             expresionRegular={expresiones.password}
           />
           <ContenedorFlex>
-            <ButtonGradient type="submit" name="Iniciar Sección" />
+            <ButtonSecondary type="submit" name="Iniciar Sección" />
 
-            <Button type="button" onClick={handleSignUp} name="Registrate" />
+            <ButtonIcon type="button" onClick={handleSignUp} name="Registrate" nameIcon='arrow-forward-circle-outline' />
           </ContenedorFlex>
         </FormContainer>
       </GlobalContainer>
