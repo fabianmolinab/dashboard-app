@@ -10,6 +10,7 @@ import { ContenedorFlex, FormContainer, GlobalContainer, HeaderForm } from './Lo
 import { FormType } from './LoginScreen.interface'
 import { ButtonIcon } from '../../components/atoms/ButtonIcon/ButtonIcon'
 import { ButtonSecondary } from '../../components/atoms/ButtonSecondary/ButtonSecondary'
+import { useNavigate } from 'react-router-dom'
 
 export const LoginScreen: React.FC = () => {
   const [correo, cambiarCorreo] = useState<FormType>({
