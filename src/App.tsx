@@ -1,13 +1,17 @@
-import { FC, StrictMode } from 'react'
+import React, { StrictMode } from 'react'
+import { Provider } from 'react-redux'
 import { AppRouter } from './routers/AppRouter'
+import { store } from './store/store'
 import { GlobalStyle } from './styles/GlobalStyles'
 
-const App: FC = () => {
+const App: React.FC = () => {
   return (
-    <StrictMode>
-      <GlobalStyle />
-      <AppRouter />
-    </StrictMode>
+    <Provider store={store}>
+      <StrictMode>
+        <GlobalStyle />
+        <AppRouter />
+      </StrictMode>
+    </Provider>
   )
 }
 
