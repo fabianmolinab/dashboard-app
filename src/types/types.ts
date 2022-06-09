@@ -1,6 +1,6 @@
 interface Props {
-  formSetError: string,
-  formRemoveError: string
+  formSetError: '[Form] Set Error',
+  formRemoveError: '[Form] Remove Error'
 }
 
 export const types: Props = {

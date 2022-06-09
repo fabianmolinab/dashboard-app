@@ -96,7 +96,7 @@ export const SignUp: React.FC = () => {
 
         <FormGrid onSubmit={handleLogin}>
           <ContenedorGridC2 flex paddB_15>
-            <HeaderFormSignUp content="Registrate en NewsApp" grid />
+            <HeaderFormSignUp content="Registrate en NewsApp" />
           </ContenedorGridC2>
 
           <ContenedorGridC2>
