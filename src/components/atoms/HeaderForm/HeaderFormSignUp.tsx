@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { colors } from '../../../const/colors'
 
 interface Props {
   content: string
-  marginB30: boolean
+  marginB30?: boolean
 }
 
 export const HeaderFormSignUp: React.FC<Props> = ({ content, marginB30 }) => {
@@ -19,6 +20,7 @@ type HeaderProps = {
 }
 
 const Header = styled.header<HeaderProps>`
+  color: ${colors.primaryColors.pBase};
   text-align: center;
   box-sizing: border-box;
 
